@@ -23,15 +23,19 @@ class WelcomeController extends Controller
         //   dd($users);
 
         //3. Eloquent ORM
-        $students= Student::select(['name','email'])->whereNotNull('email')->orderBy('name')->get();
+        // $students= Student::select(['name','email'])->whereNotNull('email')->orderBy('name')->get();
         //   dd($users);;
-        dd($students);
+        // dd($students);
 
         // foreach($students as $student){
         //     echo "Student Name: ".$student->name." ";
         //     echo "Student Email: ".$student->email."<br>";
         // }
-
-
+          
+        $student=new Student();
+        $student->name="New";
+        $student->email="email@email.com";
+        $student->save();
+    
     }
 }
