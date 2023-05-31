@@ -26,7 +26,8 @@ class WelcomeController extends Controller
         $students= Student::all();
         //dd($students);
         foreach($students as $student){
-            echo $student->name."<br>";
+            echo "Student Name: ".$student->name." ";
+            echo "Student Email: ".$student->email."<br>";
         }
 
 
