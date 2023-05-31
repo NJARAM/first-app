@@ -24,7 +24,11 @@ class WelcomeController extends Controller
 
         //3. Eloquent ORM
         $students= Student::all();
-        dd($students);
+        //dd($students);
+        foreach($students as $student){
+            echo $student->name."<br>";
+        }
+
 
     }
 }
