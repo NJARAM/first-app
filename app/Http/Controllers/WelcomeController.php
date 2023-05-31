@@ -15,11 +15,11 @@ class WelcomeController extends Controller
         //return view('welcome');
 
        // 1. Using Raw SQL QUeries
-        // $users=DB::Select('select * from users');
-        // dd($users);
+        $users=DB::Select('select * from users');
+        dd($users);
        //2. Using Query builder
-          $users=DB::table('users')->select(['name','email'])->whereNotNull('email')->orderBy('name')->get();
-          dd($users);
+        //   $users=DB::table('users')->select(['name','email'])->whereNotNull('email')->orderBy('name')->get();
+        //   dd($users);
 
         //3. Eloquent ORM
 
